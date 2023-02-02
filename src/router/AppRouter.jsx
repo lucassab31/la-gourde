@@ -1,14 +1,9 @@
 import App from "App";
-//import Contact from "pages/Contact/Contact";
-//import Home from "pages/Home/Home";
-//import ProductDetails from "pages/ProductDetails/ProductDetails";
-//import Products, { productsLoader} from "pages/Products/Products";
-import { productLoader } from "pages/ProductDetails/ProductDetails";
-import ErrorPage from "pages/ErrorPage/ErrorPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-//import Cart from "pages/Cart/Cart";
-
-
+import Home from "../pages/Home/Home";
+import Smoothies from "../pages/Smoothies/Smoothies";
+import SmoothieDetails from "../pages/SmoothieDetails/SmoothieDetails";
+import ErrorPage from "pages/ErrorPage/ErrorPage";
 
 const AppRouter = () => {
     const router = createBrowserRouter([
@@ -25,23 +20,17 @@ const AppRouter = () => {
                             element : <Home />
                         },
                         {
-                            path: "/contact",
-                            element: <Contact />,
+                            path: "/smoothies",
+                            element: <Smoothies />,
                         },
                         {
-                            path: "/produits",
-                            element: <Products />,
-                            loader: productsLoader,
+                            path: "/smoothie/:id",
+                            element: <SmoothieDetails />,
                         },
-                        {
-                            path: "/produits/:id",
-                            element: <ProductDetails />,
-                            loader : productLoader,
-                        },
-                        {
-                            path: "/panier",
-                            element: <Cart />,
-                        }
+                        // {
+                        //     path: "/panier",
+                        //     element: <Cart />,
+                        // }
                     ]
                 }
             ]
