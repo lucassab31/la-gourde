@@ -1,5 +1,6 @@
 import {Link} from "react-router-dom";
 import img404 from "../../images/404.svg";
+import { ArrowRight } from 'react-bootstrap-icons';
 
 const ErrorPage = () => {
     return (
@@ -10,7 +11,7 @@ const ErrorPage = () => {
                     <div className="card-body">
                         <h1 className="card-title text-center text-primary">Vous avez du vous égarer</h1>
                         <p className="card-text text-center">Retrouver le droit chemin</p>
-                        <p className="card-text text-center"><Link to="/" className="btn btn-dark">Par ici <i class="bi bi-arrow-right"></i></Link></p>
+                        <p className="card-text text-center"><Link to="/" className="btn btn-dark">Par ici <ArrowRight/></Link></p>
                     </div>
                 </div>
             </main>
