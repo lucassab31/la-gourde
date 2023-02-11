@@ -1,0 +1,43 @@
+.smoothieCard {
+    position: relative;
+    width: calc(50% - 10px);
+    text-align: center;
+    color: #fff;
+    padding: 0.5rem;
+
+    .smoothieIcon {
+        width: 50%;
+        margin: auto;
+    }
+
+    .smoothieCardTitle {
+        margin-top: 1rem;
+        margin-bottom: 0.2rem;
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+    .smoothieCardPrice {
+        
+    }
+
+    &:after {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 90%;
+        background-color: #212529;
+        border-radius: 100px;
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        -ms-border-radius: 100px;
+        -o-border-radius: 100px;
+        transform: translateY(-40%);
+        -webkit-transform: translateY(-40%);
+        -moz-transform: translateY(-40%);
+        -ms-transform: translateY(-40%);
+        -o-transform: translateY(-40%);
+}
+}

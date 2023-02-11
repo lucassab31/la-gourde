@@ -1,3 +1,5 @@
+import SmoothieCard from "components/SmoothieCard/SmoothieCard";
+
 const Home = () => {
     return (
     <>
