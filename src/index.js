@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import AppRouter from './router/AppRouter';
-import './index.css';
+import './index.scss';
 import reportWebVitals from './reportWebVitals';
+// import bootstrap js files
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
