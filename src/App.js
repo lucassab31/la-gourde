@@ -3,7 +3,7 @@ import Header from "./components/Header/Header";
 import { Outlet } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 
-export const App = () => {
+const App = () => {
   return (
     <>
       <Header />
@@ -12,3 +12,5 @@ export const App = () => {
     </>
   );
 };
+
+export default App;
