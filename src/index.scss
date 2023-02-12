@@ -3,6 +3,7 @@
 @tailwind utilities;
 @import "styles/variables";
 @import "styles/header/header";
+@import "styles/header/smoothies";
 @import "~bootstrap/scss/bootstrap";
 
 body {
@@ -33,4 +34,20 @@ main {
 
 .gap5 {
   gap: 5px;
+}
+
+.hero_banner .product-device{
+  transform: rotate(18deg);
+    top: 47px;
+    position: absolute;
+    right: 103px;
+}
+
+#cart{
+  height: 60vh;
+  .bg-cart{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }

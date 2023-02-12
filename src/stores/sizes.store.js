@@ -7,6 +7,11 @@ export const Sizes = types.model("Sizes", {
   price: types.number,
   maxIngredients: types.number,
 })
+
+
+export const SizesStore = types.model("SizesStore", {
+  sizes: types.array(Sizes),
+})
 .actions(self => ({
   loadSizes: flow(function* () {
     try{
@@ -17,11 +22,7 @@ export const Sizes = types.model("Sizes", {
       console.log(error);
     }
   }),
-}))
-
-export const SizesStore = types.model("SizesStore", {
-  sizes: types.array(Sizes),
-});
+}));
 
 export const sizesStore = SizesStore.create({
   sizes: [],

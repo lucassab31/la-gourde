@@ -7,9 +7,11 @@ const AllergeneIcon = (props) => {
     const url = require(`../../images/icon/allergene/${name}`);
     return (
         <>
+         <li className='me-3'>
             <div className={style.allergene}>
                 <img src={url} alt={title} />
             </div>
+         </li>
         </>
     );
 }

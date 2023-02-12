@@ -1,7 +1,7 @@
 import SmoothieIcon from "components/SmoothieIcon/SmoothieIcon";
 import Button from "components/Button/Button";
 import AllergeneCard from "components/AllergeneCard/AllergeneCard";
-import style from "./SmoothieCard.module.scss";
+import style from "./SmoothieCardCreate.module.scss";
 import { Link } from "react-router-dom";
 
 const SmoothieCard = ({ smoothie }) => {

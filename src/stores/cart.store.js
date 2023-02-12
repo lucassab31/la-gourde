@@ -1,6 +1,7 @@
 import {types, getRoot} from 'mobx-state-tree'
 import {Ingredients} from './ingredients.store'
 import {Sizes} from './sizes.store'
+import {toJS} from 'mobx'
 
 const CartProduct = types.model("CartProduct",{
     id: types.number,
@@ -32,7 +33,7 @@ const CartProduct = types.model("CartProduct",{
 }))
 .views((self) => ({
     get totalPrice(){
-        return self.quantity * self.price;
+        return self.quantity * self.size[0].price;
     }
 }))
 
@@ -42,9 +43,10 @@ export const CartStore = types.model("CartStore",{
 })
 .actions((self) => ({
    addToCart(product){
+    console.log(product)
        const foundProduct = self.products.find((p) => p.id === product.id);
        if(foundProduct){
-            foundProduct.quantity++;
+            foundProduct.quantity += product.quantity;
        }else{
             self.products.push(product);
        }

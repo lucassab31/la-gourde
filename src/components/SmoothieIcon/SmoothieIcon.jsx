@@ -1,5 +1,5 @@
 const SmoothieIcon = (props) => {
-    const { color } = props;
+    const { color, view } = props;
 
     let colorDark = newShade(color, -10);
     return (

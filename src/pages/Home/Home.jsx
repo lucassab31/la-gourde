@@ -2,37 +2,47 @@ import SmoothieCard from "components/SmoothieCard/SmoothieCard";
 import { useStore } from "contexts/store.context";
 import { observer } from "mobx-react-lite";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { toJS } from "mobx";
+import SmoothieIcon from "components/SmoothieIcon/SmoothieIcon";
 
 const Home = observer(() => {
   const {products: {products,loadSmoothies}} = useStore()
+
+  const product1 = products[1];
 
   useEffect(()=>{
     loadSmoothies();
   }, [])
 
+  let productsList = toJS(products);
+  let productsListBestSeller = productsList.slice(1, 4);
+  
   return (
     <>
         <section className="hero_banner">
-            <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-                <div className="col-md-5 p-lg-5 mx-auto my-5">
-                <h1 className="display-4 fw-normal">Punny headline</h1>
-                <p className="lead fw-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple’s marketing pages.</p>
-                <a className="btn btn-outline-secondary" href="#">Coming soon</a>
+            <div className="position-relative overflow-hidden p-3 p-md-5 bg-secondary rounded-4">
+                <div className="col-md-6 p-lg-5 mx-5 my-5 text-white">
+                  <span>Vedette</span>
+                  <h1 className="display-4 fw-bold">{product1.title}</h1>
+                  <p className="lead fw-normal">{product1.description}</p>
+                  <Link to={`/smoothie/${product1.id}`} className="btn btn-primary text-white fw-bold">Commander</Link>
                 </div>
-                <div className="product-device shadow-sm d-none d-md-block"></div>
-                <div className="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+                <div className="product-device d-none d-md-block col-4">
+                  <SmoothieIcon color={product1.color} />
+                </div>
             </div>
         </section>
         <section className="top_sell">
-            <div className="container px-4 py-5" id="custom-cards">
+            <div className="container py-5" id="custom-cards">
                 <h2 className="pb-2 border-bottom">Top des ventes</h2>
                 <div className="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-                    {products.map((product) => (
+                    {productsListBestSeller.map((product) => (
                       <SmoothieCard key={product.id} smoothie={product} />
                     ))}
                 </div>
             </div>
-      </section>
+        </section>
     </>
   );
 });

@@ -2,9 +2,9 @@ import React from 'react';
 import style from './Button.module.scss';
 
 const Button = (props) => {
-    const { title, callback } = props;
+    const { title, callback, styleClass = "btn btn-primary text-white fw-bold" } = props;
     return (
-        <button onClick={callback} className="btn btn-primary text-white">
+        <button onClick={callback} className={styleClass}>
             {title}
         </button>
     );

@@ -5,10 +5,10 @@ const QuantityPicker = (props) => {
     const {quantity, onClickPlus, onClickMinus} = props;
 
     return (
-        <div>
-            <button onClick={onClickMinus} >-</button>
+        <div className={style.quantityPicker}>
+            <button onClick={onClickMinus} className="btn btn-secondary" >-</button>
             <span>{quantity}</span>
-            <button onClick={onClickPlus} >+</button>
+            <button onClick={onClickPlus} className="btn btn-secondary" >+</button>
         </div>
     )  
 
