@@ -14,7 +14,7 @@ export const SIZES = [
   {
     id: 3,
     name: "Healthy's",
-    price: 7.5,
+    price: 5.5,
     maxIngredients: 10,
   },
 ];

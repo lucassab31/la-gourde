@@ -15,6 +15,9 @@ const Nav = (props) => {
         <li className={strClass}>
             <NavLink to="/smoothies" className={navStyle}>Smoothies</NavLink>
         </li>
+        <li className={strClass}>
+            <NavLink to="/panier" className={navStyle}>Panier</NavLink>
+        </li>
        </>
     )
 }

@@ -1,15 +1,14 @@
 export const SMOOTHIES = [
   {
-    id: 0,
+    id: 1,
     title: "Créez votre smoothie !",
-    description:
-      "Allant de 2 à 5 saveurs créez votre smoothie ultra fruité et à votre goût.",
+    description: "Allant de 2 à 5 saveurs créez votre smoothie ultra fruité et à votre goût.",
     ingredients: [],
-    size: null,
+    size: [],
     color: "#ff8b8b",
   },
   {
-    id: 1,
+    id: 2,
     title: "Coup de gourde",
     description: "Un smoothie qui va vous taper à la tête !",
     ingredients: [
@@ -21,6 +20,7 @@ export const SMOOTHIES = [
           {
             id: 1,
             name: "Agrumes",
+            icon : "agrums.svg"
           },
         ],
         included: true,
@@ -33,6 +33,7 @@ export const SMOOTHIES = [
           {
             id: 2,
             name: "Fruits rouges",
+            icon : "red_fruit.svg"
           },
         ],
         included: true,
@@ -45,6 +46,7 @@ export const SMOOTHIES = [
           {
             id: 3,
             name: "Armoise",
+            icon : "armoise.svg"
           },
         ],
         included: true,
@@ -57,6 +59,7 @@ export const SMOOTHIES = [
           {
             id: 4,
             name: "Pollen",
+            icon : "pollen.svg"
           },
         ],
         included: true,
@@ -69,21 +72,24 @@ export const SMOOTHIES = [
           {
             id: 3,
             name: "Armoise",
+            icon : "armoise.svg"
           },
         ],
         included: true,
       },
     ],
-    size: {
+    size: [
+      {
       id: 1,
       name: "Signature",
       price: 7.0,
       maxIngredients: 10,
-    },
+      },
+    ],
     color: "#cc0000",
   },
   {
-    id: 2,
+    id: 3,
     title: "Gourmand",
     description: "Pour se faire plaisir sans soucier d'après.",
     ingredients: [
@@ -95,6 +101,7 @@ export const SMOOTHIES = [
           {
             id: 5,
             name: "Latex",
+            icon : "latex.svg"
           },
         ],
         included: true,
@@ -107,6 +114,7 @@ export const SMOOTHIES = [
           {
             id: 6,
             name: "Arachides",
+            icon : "nuts.svg"
           },
         ],
         included: true,
@@ -119,24 +127,24 @@ export const SMOOTHIES = [
           {
             id: 7,
             name: "Fruit à coque",
+            icon : "amaranth.svg"
           },
         ],
         included: true,
       },
     ],
-    size: {
+    size: [{
       id: 2,
       name: "Gourmands",
       price: 6.5,
       maxIngredients: 10,
-    },
+    }],
     color: "#b97608",
   },
   {
-    id: 2,
+    id: 4,
     title: "Healthy",
-    description:
-      "Pour tous nos fit boys et fit girls et tous les autres fit bien évidemment 💪",
+    description: "Pour tous nos fit boys et fit girls et tous les autres fit bien évidemment 💪",
     ingredients: [
       {
         id: 9,
@@ -146,6 +154,7 @@ export const SMOOTHIES = [
           {
             id: 8,
             name: "Choux",
+            icon : "cabbage.svg"
           },
         ],
         included: true,
@@ -158,6 +167,7 @@ export const SMOOTHIES = [
           {
             id: 5,
             name: "Latex",
+            icon : "latex.svg"
           },
         ],
         included: true,
@@ -170,6 +180,7 @@ export const SMOOTHIES = [
           {
             id: 9,
             name: "Pépins",
+            icon : "pip.svg"
           },
         ],
         included: true,
@@ -182,21 +193,22 @@ export const SMOOTHIES = [
           {
             id: 10,
             name: "Gluten",
+            icon : "gluten.svg"
           },
         ],
         included: true,
       },
     ],
-    size: {
+    size: [{
       id: 3,
       name: "Healthy's",
       price: 7.5,
       maxIngredients: 10,
-    },
+    }],
     color: "#a4ff9d",
   },
   {
-    id: 2,
+    id: 5,
     title: "Énergisant",
     description: "Pour un petit coup de peps !",
     ingredients: [
@@ -208,6 +220,7 @@ export const SMOOTHIES = [
           {
             id: 11,
             name: "Caféine",
+            icon : "coffee.svg"
           },
         ],
         included: true,
@@ -220,6 +233,7 @@ export const SMOOTHIES = [
           {
             id: 12,
             name: "LTP",
+            icon : "ltp.svg"
           },
         ],
         included: true,
@@ -232,6 +246,7 @@ export const SMOOTHIES = [
           {
             id: 2,
             name: "Fruits rouges",
+            icon : "red_fruit.svg"
           },
         ],
         included: true,
@@ -244,17 +259,18 @@ export const SMOOTHIES = [
           {
             id: 9,
             name: "Pépins",
+            icon : "pip.svg"
           },
         ],
         included: true,
       },
     ],
-    size: {
+    size: [{
       id: 3,
       name: "Healthy's",
       price: 7.5,
       maxIngredients: 10,
-    },
-    color: "#a4ff9d",
+    }],
+    color: "#60D0F3",
   },
 ];

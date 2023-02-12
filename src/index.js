@@ -5,13 +5,14 @@ import './index.scss';
 import reportWebVitals from './reportWebVitals';
 // import bootstrap js files
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import { StoreContextProvider } from 'contexts/store.context';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <StoreContextProvider>
     <AppRouter />
-  </React.StrictMode>
+  </StoreContextProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "../pages/Home/Home";
 import Smoothies from "../pages/Smoothies/Smoothies";
 import SmoothieDetails from "../pages/SmoothieDetails/SmoothieDetails";
+import Cart from "../pages/Cart/Cart";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 const AppRouter = () => {
@@ -22,15 +23,16 @@ const AppRouter = () => {
             {
               path: "/smoothies",
               element: <Smoothies />,
+              
             },
             {
               path: "/smoothie/:id",
               element: <SmoothieDetails />,
             },
-            // {
-            //     path: "/panier",
-            //     element: <Cart />,
-            // }
+            {
+                path: "/panier",
+                element: <Cart />,
+            }
           ],
         },
       ],
