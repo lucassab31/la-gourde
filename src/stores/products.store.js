@@ -8,7 +8,7 @@ export const Products = types.model("Products", {
   title: types.string,
   description: types.string,
   ingredients: types.array(Ingredients),
-  size: Sizes | null,
+  size: types.array(Sizes),
   color: types.string,
 });
 

@@ -5,7 +5,7 @@ export const SMOOTHIES = [
     description:
       "Allant de 2 à 5 saveurs créez votre smoothie ultra fruité et à votre goût.",
     ingredients: [],
-    size: null,
+    size: [],
     color: "#ff8b8b",
   },
   {
@@ -134,12 +134,12 @@ export const SMOOTHIES = [
         included: true,
       },
     ],
-    size: {
+    size: [{
       id: 2,
       name: "Gourmands",
       price: 6.5,
       maxIngredients: 10,
-    },
+    }],
     color: "#b97608",
   },
   {
@@ -201,12 +201,12 @@ export const SMOOTHIES = [
         included: true,
       },
     ],
-    size: {
+    size: [{
       id: 3,
       name: "Healthy's",
       price: 7.5,
       maxIngredients: 10,
-    },
+    }],
     color: "#a4ff9d",
   },
   {
@@ -267,12 +267,12 @@ export const SMOOTHIES = [
         included: true,
       },
     ],
-    size: {
+    size: [{
       id: 3,
       name: "Healthy's",
       price: 7.5,
       maxIngredients: 10,
-    },
+    }],
     color: "#60D0F3",
   },
 ];
