@@ -14,7 +14,7 @@ const Home = observer(() => {
     }, [loadSmoothies]);
 
   let productsList = toJS(products);
-  let product1 = productsList[0];
+  let product1 = productsList[1];
   let productsListBestSeller = productsList.slice(1, 4);
   
   return (
