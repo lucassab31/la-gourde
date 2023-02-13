@@ -1,19 +1,15 @@
 import { useStore } from "contexts/store.context";
 import { observer } from "mobx-react-lite";
-import { toJS } from "mobx";
 import QuantityPicker from "components/QuantityPicker/QuantiyPicker";
 import BackButton from "components/BackButton/BackButton";
 import Button from "components/Button/Button";
-import cartIllustration from "../../images/cart.svg";
 import SmoothieIcon from "components/SmoothieIcon/SmoothieIcon";
+import { Link } from "react-router-dom";
 
 const Cart = observer(() => {
   const {cart} = useStore();
   const {products, removeFromCart, totalPrice, resetCart } = cart
 
-  let backgroundImageUrl = `url(${cartIllustration})`;
-  let productList = toJS(products);
-  console.log(productList);
   return (
     <>
         <div className="row rounded-4" id="cart">
@@ -36,7 +32,7 @@ const Cart = observer(() => {
                                         <p className="m-0">{product.size[0].price}€ /unité</p>
                                     </div>
                                     <div className="d-flex justify-content-between">
-                                        <p>taille : {product.size[0].name} </p>
+                                        <p>Taille : {product.size[0].name} </p>
                                         <QuantityPicker quantity={product.quantity} onClickPlus={product.increment} onClickMinus={product.decrement} />
                                     </div>
                                 </div>
@@ -45,22 +41,17 @@ const Cart = observer(() => {
                         ))}
                     </ul>
                     <div>
-                    <div className="d-flex align-items-center justify-content-between">
-                        <h3>Total</h3>
-                    <p className="m-0">{totalPrice}€</p>
-                    </div>
-                    <div className="d-flex align-items-center justify-content-between">
-                        <Button title="Vider le panier" onClick={resetCart} styleClass="btn btn-secondary" />
-                        <Button title="Commander"/>
-                    </div>
-                    
-                    
+                        <div className="d-flex align-items-center justify-content-between">
+                            <h3>Total</h3>
+                        <p className="m-0">{totalPrice}€</p>
+                        </div>
+                        <div className="d-flex align-items-center justify-content-between">
+                            <Button title="Vider le panier" callback={resetCart} styleClass="btn btn-secondary" />
+                            <Link className="btn btn-primary text-white fw-bold" to="/commande">Commander</Link>
+                        </div>
                     </div>
                 </div>
-                
-                
             </div>
-            
         </div>
     </>
   );

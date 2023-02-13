@@ -5,32 +5,30 @@ const { createContext, useContext, useState, useEffect } = require("react");
 const StoreContext = createContext();
 
 export const StoreContextProvider = (props) => {
-  const { children } = props;
+    const { children } = props;
 
-  const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(true);
 
-  const initStore = async () => {
-    persist("all", rootStore, {
-      storage: localStorage,
-    })
-      .then(() => {
-        setIsLoading(false);
-      })
-      .catch((err) => {
-        console.log(err);
-        setIsLoading();
-      });
-  };
+    const initStore = async () => {
+        persist('all', rootStore, {
+            storage: localStorage
+        }).then(() => {
+            setIsLoading(false);
+        }).catch((error) => {
+            console.log(error);
+            setIsLoading();
+        });
+    }
 
-  useEffect(() => {
-    initStore();
-  }, []);
+    useEffect(() => {
+        initStore();
+    }, []);
 
-  return isLoading ? (
-    <p>Loading...</p>
-  ) : (
-    <StoreContext.Provider value={rootStore}>{children}</StoreContext.Provider>
-  );
+    return isLoading ? <div>Loading...</div> : (
+        <StoreContext.Provider value={rootStore}>
+            {children}
+        </StoreContext.Provider>
+    );
 };
 
 export const useStore = () => useContext(StoreContext);
