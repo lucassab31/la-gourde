@@ -6,7 +6,7 @@ const ErrorPage = () => {
   return (
     <>
       <main className="container">
-        <img src={img404} className="img-fluid my-4" alt="404 image" />
+        <img src={img404} className="img-fluid my-4 mx-auto" alt="404 image" />
         <div className="card">
           <div className="card-body">
             <h1 className="card-title text-center text-primary">
