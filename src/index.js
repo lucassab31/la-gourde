@@ -1,14 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import AppRouter from './router/AppRouter';
-import './index.scss';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import AppRouter from "./router/AppRouter";
+import "./index.scss";
+import reportWebVitals from "./reportWebVitals";
 // import bootstrap js files
-import 'bootstrap/dist/js/bootstrap.bundle.min';
-import { StoreContextProvider } from 'contexts/store.context';
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import { StoreContextProvider } from "contexts/store.context";
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <StoreContextProvider>
     <AppRouter />

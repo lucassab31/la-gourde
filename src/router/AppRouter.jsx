@@ -2,7 +2,9 @@ import App from "../App";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "../pages/Home/Home";
 import Smoothies, { smoothiesLoader } from "../pages/Smoothies/Smoothies";
-import SmoothieDetails, { smoothieLoader } from "../pages/SmoothieDetails/SmoothieDetails";
+import SmoothieDetails, {
+  smoothieLoader,
+} from "../pages/SmoothieDetails/SmoothieDetails";
 import Cart from "../pages/Cart/Cart";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
@@ -19,6 +21,7 @@ const AppRouter = () => {
             {
               index: true,
               element: <Home />,
+              loader: smoothiesLoader,
             },
             {
               path: "/smoothies",
@@ -31,9 +34,9 @@ const AppRouter = () => {
               loader: smoothieLoader,
             },
             {
-                path: "/panier",
-                element: <Cart />,
-            }
+              path: "/panier",
+              element: <Cart />,
+            },
           ],
         },
       ],
