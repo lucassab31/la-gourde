@@ -5,6 +5,7 @@ import Smoothies, { smoothiesLoader } from "../pages/Smoothies/Smoothies";
 import SmoothieDetails, { smoothieLoader } from "../pages/SmoothieDetails/SmoothieDetails";
 import Cart from "../pages/Cart/Cart";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import Commande from "pages/Commande/Commande";
 
 const AppRouter = () => {
   const router = createBrowserRouter([
@@ -33,7 +34,11 @@ const AppRouter = () => {
             {
                 path: "/panier",
                 element: <Cart />,
-            }
+            },
+            {
+                path: "/commande",
+                element: <Commande />,
+            },
           ],
         },
       ],
