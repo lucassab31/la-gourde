@@ -7,15 +7,14 @@ import { toJS } from "mobx";
 import SmoothieIcon from "components/SmoothieIcon/SmoothieIcon";
 
 const Home = observer(() => {
-  const {products: {products,loadSmoothies}} = useStore()
+  const {products: {products, loadSmoothies}} = useStore();
 
-  const product1 = products[1];
-
-  useEffect(()=>{
-    loadSmoothies();
-  }, [])
+    useEffect(() => {
+      loadSmoothies();
+    }, [loadSmoothies]);
 
   let productsList = toJS(products);
+  let product1 = productsList[0];
   let productsListBestSeller = productsList.slice(1, 4);
   
   return (

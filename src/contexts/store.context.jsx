@@ -1,6 +1,6 @@
 import persist from "mst-persist";
-import {createContext, useContext, useState, useEffect} from "react"
 import { rootStore } from "stores/root.store";
+const { createContext, useContext, useState, useEffect } = require("react");
 
 
 const StoreContext = createContext();
@@ -26,7 +26,7 @@ export const StoreContextProvider = (props) => {
         initStore();
     }, [])
 
-    return isLoading ? <p>loading...</p> : <StoreContext.Provider value={rootStore}>{children}</StoreContext.Provider>
+    return (isLoading ? <p>loading...</p> : <StoreContext.Provider value={rootStore}>{children}</StoreContext.Provider>);
 }
 
 export const useStore = () => useContext(StoreContext);

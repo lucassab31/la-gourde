@@ -1,7 +1,7 @@
-import { types, flow } from "mobx-state-tree";
 import { getSmoothies } from "services/smoothies.product";
 import { Ingredients } from "./ingredients.store";
 import { Sizes } from "./sizes.store";
+const { types, flow } = require("mobx-state-tree");
 
 export const Products = types.model("Products", {
   id: types.number,
