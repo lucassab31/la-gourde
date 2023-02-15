@@ -24,12 +24,12 @@ const Commande = observer(() => {
   return (
     <div>
         <BackButton />
-        <h1>Commande</h1>
         <div className="row mt-2 g-5">
             <div className="col-md-5 border-end border-secondary border-2">
                 <img src={creditCard} className="img-fluid" alt="Image de carte de crédit" />
             </div>
             <div className="col-md-7">
+                <h1>Paiement</h1>
                 <form action="">
                     <div className="mb-3">
                         <label htmlFor="name" className="form-label">Nom</label>
