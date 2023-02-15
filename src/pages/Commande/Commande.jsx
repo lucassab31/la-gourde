@@ -1,6 +1,7 @@
 import BackButton from "components/BackButton/BackButton";
 import SmoothieIcon from "components/SmoothieIcon/SmoothieIcon";
 import { useStore } from "contexts/store.context";
+import { Link } from "react-router-dom";
 import creditCard from "../../images/credit_card.svg";
 const { observer } = require("mobx-react-lite");
 
@@ -77,7 +78,7 @@ const Commande = observer(() => {
                     <h3>Total</h3>
                     <p className="fw-bold fs-2 text-primary">{totalPrice}€</p>
                 </div>
-                <button className="btn btn-primary w-100 mt-2 text-white fw-bold btn-lg">Payer</button>
+                <Link to="/recap" className="btn btn-primary w-100 mt-2 text-white fw-bold btn-lg">Payer</Link>
             </div>
         </div>
     </div>
