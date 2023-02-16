@@ -1,7 +1,6 @@
 import BackButton from "components/BackButton/BackButton";
 import SmoothieIcon from "components/SmoothieIcon/SmoothieIcon";
 import { useStore } from "contexts/store.context";
-import { Link } from "react-router-dom";
 import creditCard from "../../images/credit_card.svg";
 const { observer } = require("mobx-react-lite");
 
@@ -26,7 +25,7 @@ const Commande = observer(() => {
         <BackButton />
         <div className="row mt-2 g-5">
             <div className="col-md-5 border-end border-secondary border-2">
-                <img src={creditCard} className="img-fluid" alt="Image de carte de crédit" />
+                <img src={creditCard} className="img-fluid" alt="Carte de crédit" />
             </div>
             <div className="col-md-7">
                 <h1>Paiement</h1>
