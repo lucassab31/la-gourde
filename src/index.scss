@@ -36,16 +36,14 @@ main {
   gap: 5px;
 }
 
-.hero_banner .product-device, .product-device{
-  transform: rotate(18deg);
-    top: 47px;
-    position: absolute;
-    right: 103px;
+.hero_banner .product-device,
+.product-device {
+  transform: rotate(18deg) translateY(10%) translateX(-10%);
 }
 
-#cart{
+#cart {
   height: 60vh;
-  .bg-cart{
+  .bg-cart {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
