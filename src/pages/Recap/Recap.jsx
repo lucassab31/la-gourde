@@ -9,7 +9,7 @@ const Recap = () => {
 
   useEffect(() => {
     resetCart();
-  }, []);
+  }, [resetCart]);
 
   return (
     <div className="card mx-auto w-50 border-secondary">

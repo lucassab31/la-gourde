@@ -51,14 +51,14 @@ const Personalizer = observer(() => {
 
   return (
     <div className="tw-container tw-mx-auto tw-grid tw-gap-8 md:tw-grid-cols-2">
-      <div>
+      <div className="tw-flex tw-items-center">
         <SmoothieIcon
-          className="tw-max-h-64 md:tw-max-h-[450px] md:tw-sticky md:tw-top-28 md:tw-mt-16"
+          className="tw-max-h-64 md:tw-max-h-[450px] md:tw-sticky md:tw-top-28"
           color={"#ff8b8b"}
         />
       </div>
       <div>
-        <h1 className="tw-w-full tw-text-center tw-text-[#ff8b8b] tw-font-extrabold tw-text-5xl tw-mb-6">
+        <h1 className="tw-w-full tw-text-center tw-text-[#ff8b8b] tw-font-extrabold tw-text-5xl tw-mb-8">
           Customisez
         </h1>
         <form
