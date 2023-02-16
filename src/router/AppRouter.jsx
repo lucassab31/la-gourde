@@ -22,12 +22,10 @@ const AppRouter = () => {
             {
               index: true,
               element: <Home />,
-              loader: smoothiesLoader,
             },
             {
               path: "/smoothies",
               element: <Smoothies />,
-              loader: smoothiesLoader,
             },
             {
               path: "/smoothie/:id",

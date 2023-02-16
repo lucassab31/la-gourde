@@ -13,20 +13,19 @@ const SmoothieCard = ({ smoothie }) => {
     const color = smoothie.color;
     const newColor = newShadeOpacity(color, 0.3);
     return (
-        <div className="col-4">
-            <div className="card card-cover h-100 overflow-hidden bg-white rounded-4" style={{backgroundColor: smoothie.color, borderColor: smoothie.color}}>
-                <div className="d-flex flex-column h-100 m-3 p-5 rounded-4 " style={{backgroundColor: newColor}}>
-                    <div className={style.smoothieIcon}>
-                        <SmoothieIcon color={smoothie.color} />
-                    </div>
-                    <h3 className="pt-5  mb-4 display-6 lh-1 fw-bold">{smoothie.title}</h3>
-                    <p className="mb-4">{smoothie.description}</p>
-                    <h4>{smoothie.size[0] ? smoothie.size[0].price+"€" : "À partir de 7€"}</h4>
-                    {bIngredients ? <AllergeneCard ingredients={smoothie.ingredients} /> : null }
-                    <Link to={`/smoothie/${smoothie.id}`} className="btn btn-primary text-white">Commander</Link>
-                </div>
+        <>
+            <div className="col-md-6 p-lg-5 mx-5 my-5 text-white">
+                  <h1 className="mb-4 display-6 lh-1 fw-bold">{smoothie.title}</h1>
+                  <p className="mb-4">{smoothie.description}</p>
+                  <h4>{smoothie.size[0] ? smoothie.size[0].price+"€" : "À partir de 7€"}</h4>
+                  {bIngredients ? <AllergeneCard ingredients={smoothie.ingredients} /> : null }
+                  <Link to={`/smoothie/${smoothie.id}`} className="btn btn-primary text-white">Commander</Link>
             </div>
-        </div>
+            <div  className="product-device d-none d-md-block col-4">
+                <SmoothieIcon color={smoothie.color} />
+            </div>
+        </>
+        
     )
 }
 

@@ -12,7 +12,7 @@ const Home = observer(() => {
   } = useStore();
 
   let productsListBestSeller = toJS(products).slice(1, 4);
-  let productFirst = toJS(products)[0];
+  let productFirst = toJS(products)[1];
 
   useEffect(() => {
     loadSmoothies();
@@ -24,14 +24,11 @@ const Home = observer(() => {
         <section className="hero_banner">
           <div className="position-relative overflow-hidden p-3 p-md-5 bg-secondary rounded-4">
             <div className="col-md-6 p-lg-5 mx-5 my-5 text-white">
+              <span>Vedette</span>
               <h1 className="display-4 fw-bold">{productFirst.title}</h1>
               <p className="lead fw-normal">{productFirst.description}</p>
-              <Link
-                to={`/smoothie/${productFirst.id}`}
-                className="btn btn-primary text-white fw-bold"
-              >
-                Commander
-              </Link>
+              <h4>{productFirst.size[0].price}€</h4>
+              <Link to={`/smoothie/${productFirst.id}`} className="btn btn-primary text-white fw-bold" >Commander</Link>
             </div>
             <div className="product-device d-none d-md-block col-4">
               <SmoothieIcon color={productFirst.color} />
