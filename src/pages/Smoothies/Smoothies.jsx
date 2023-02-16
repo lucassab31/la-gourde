@@ -6,11 +6,7 @@ import { toJS } from "mobx";
 
 const Smoothies = observer(() => {
   const {
-    products: {
-      products,
-      loadSmoothies,
-      loadSmoothiesByIngredient,
-    },
+    products: { products, loadSmoothies, loadSmoothiesByIngredient },
   } = useStore();
   const {
     ingredients: { ingredients, loadIngredients },
@@ -94,7 +90,7 @@ const Smoothies = observer(() => {
                         </div>
                     </div> */}
         </div>
-        <div className="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+        <div className="tw-grid tw-gap-5 md:tw-grid-cols-2 lg:tw-grid-cols-3 py-5">
           <SmoothieCard
             key={0}
             smoothie={{

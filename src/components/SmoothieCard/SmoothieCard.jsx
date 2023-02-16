@@ -17,7 +17,7 @@ const SmoothieCard = ({ smoothie }) => {
         style={{ backgroundColor: smoothie.color, borderColor: smoothie.color }}
       >
         <div
-          className="d-flex flex-column h-100 m-2 p-5 rounded-3 "
+          className="d-flex flex-column h-100 m-2 tw-py-5 tw-px-8 rounded-3 "
           style={{ backgroundColor: newColor }}
         >
           <div
@@ -28,25 +28,30 @@ const SmoothieCard = ({ smoothie }) => {
           <h3 className="pt-5  mb-4 display-6 lh-1 fw-bold">
             {smoothie.title}
           </h3>
-          <p className="mb-4">{smoothie.description}</p>
+          <p className="mb-2">{smoothie.description}</p>
           <h4>
             {smoothie.size ? smoothie.size.price + "€" : "À partir de 4€"}
           </h4>
-          {bIngredients ? (
-            <AllergeneCard ingredients={smoothie.ingredients} />
-          ) : null}
-          {smoothie.id === 0 ? (
-            <Link to={`/personnaliser`} className="btn btn-primary text-white">
-              Commander
-            </Link>
-          ) : (
-            <Link
-              to={`/smoothie/${smoothie.id}`}
-              className="btn btn-primary text-white"
-            >
-              Commander
-            </Link>
-          )}
+          <div className="tw-mt-auto tw-pt-5">
+            {bIngredients ? (
+              <AllergeneCard ingredients={smoothie.ingredients} />
+            ) : null}
+            {smoothie.id === 0 ? (
+              <Link
+                to={`/personnaliser`}
+                className="btn btn-primary text-white"
+              >
+                Commander
+              </Link>
+            ) : (
+              <Link
+                to={`/smoothie/${smoothie.id}`}
+                className="btn btn-primary text-white"
+              >
+                Commander
+              </Link>
+            )}
+          </div>
         </div>
       </div>
     </div>

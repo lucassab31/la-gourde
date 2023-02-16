@@ -4,7 +4,7 @@ import { Tooltip, OverlayTrigger } from "react-bootstrap";
 const AllergeneIcon = (props) => {
   const { name, title } = props;
   const url = require(`../../images/icon/allergene/${name}`);
-  
+
   const tooltip = (
     <Tooltip id="button-tooltip">
      {title}
