@@ -41,7 +41,7 @@ const Home = observer(() => {
       <section className="top_sell">
         <div className="container py-5" id="custom-cards">
           <h2 className="pb-2 border-bottom">Top des ventes</h2>
-          <div className="tw-grid tw-gap-5 md:tw-grid-cols-3">
+          <div className="tw-grid tw-gap-5 md:tw-grid-cols-2 lg:tw-grid-cols-3 py-5">
             {productsListBestSeller.map((product) => (
               <SmoothieCard key={product.id} smoothie={product} />
             ))}
