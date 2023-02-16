@@ -4,7 +4,7 @@ const AllergeneCard = (props) => {
   const { ingredients } = props;
   return (
     <>
-      <ul className="d-flex list-unstyled mt-auto">
+      <ul className="d-flex list-unstyled tw-flex-wrap tw-gap-3">
         {ingredients.map((ingredient) => (
           <AllergeneIcon
             key={ingredient.id}
