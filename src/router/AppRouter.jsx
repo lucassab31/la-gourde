@@ -1,7 +1,7 @@
 import App from "../App";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "../pages/Home/Home";
-import Smoothies, { smoothiesLoader } from "../pages/Smoothies/Smoothies";
+import Smoothies from "../pages/Smoothies/Smoothies";
 import SmoothieDetails, {
   smoothieLoader,
 } from "../pages/SmoothieDetails/SmoothieDetails";

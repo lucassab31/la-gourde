@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const Cart = observer(() => {
   const { cart } = useStore();
-  const { products, removeFromCart, totalPrice, resetCart } = cart;
+  const { products, totalPrice, resetCart } = cart;
 
   return (
     <>

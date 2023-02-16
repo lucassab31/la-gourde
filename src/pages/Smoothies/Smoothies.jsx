@@ -1,5 +1,4 @@
 import SmoothieCard from "components/SmoothieCard/SmoothieCard";
-import SmoothieCardCreate from "components/SmoothieCardCreate/SmoothieCardCreate";
 import { useEffect } from "react";
 import { useStore } from "contexts/store.context";
 import { observer } from "mobx-react-lite";
@@ -12,14 +11,13 @@ const Smoothies = observer(() => {
       loadSmoothies,
       loadSmoothiesByIngredient,
       loadSmoothieOne,
-      productOne,
     },
   } = useStore();
   const {
     ingredients: { ingredients, loadIngredients },
   } = useStore();
   const {
-    allergens: { allergens, loadAllergens },
+    allergens: { loadAllergens },
   } = useStore();
 
   useEffect(() => {

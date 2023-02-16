@@ -1,12 +1,11 @@
 import SmoothieIcon from "components/SmoothieIcon/SmoothieIcon";
-import Button from "components/Button/Button";
 import AllergeneCard from "components/AllergeneCard/AllergeneCard";
 import style from "./SmoothieCard.module.scss";
 import { Link } from "react-router-dom";
 
 const SmoothieCard = ({ smoothie }) => {
   let bIngredients = true;
-  if (smoothie.ingredients.length == 0) {
+  if (smoothie.ingredients.length === 0) {
     bIngredients = false;
   }
   const color = smoothie.color;
@@ -56,7 +55,7 @@ const newShadeOpacity = (hex, magnitude) => {
   var c;
   if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
     c = hex.substring(1).split("");
-    if (c.length == 3) {
+    if (c.length === 3) {
       c = [c[0], c[0], c[1], c[1], c[2], c[2]];
     }
     c = "0x" + c.join("");
