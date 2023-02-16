@@ -9,7 +9,7 @@ const AllergeneCard = (props) => {
           <AllergeneIcon
             key={ingredient.id}
             name={ingredient.allergens[0].icon}
-            title={ingredient.allergens[0].title}
+            title={ingredient.allergens[0].name}
           />
         ))}
       </ul>

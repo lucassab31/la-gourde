@@ -20,6 +20,10 @@ const Nav = (props) => {
             <NavLink to="/smoothies" className={navStyle}>Smoothies</NavLink>
         </li>
         <li className={strClass}>
+            <Icon.Pencil className="ms-2 text-primary"/>
+            <NavLink to="/personnaliser" className={navStyle}>Création</NavLink>
+        </li>
+        <li className={strClass}>
             <Icon.Cart className="ms-2 text-primary"/>
             <NavLink to="/panier" className={navStyle}>Panier</NavLink>
         </li>
