@@ -34,14 +34,14 @@ const Home = observer(() => {
             </Link>
           </div>
           <div className="product-device d-none d-md-block col-4">
-            <SmoothieIcon color={"#ff8b8b"} />
+            <SmoothieIcon className={"tw-h-[400px]"} color={"#ff8b8b"} />
           </div>
         </div>
       </section>
       <section className="top_sell">
         <div className="container py-5" id="custom-cards">
           <h2 className="pb-2 border-bottom">Top des ventes</h2>
-          <div className="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+          <div className="tw-grid tw-gap-5 md:tw-grid-cols-3">
             {productsListBestSeller.map((product) => (
               <SmoothieCard key={product.id} smoothie={product} />
             ))}

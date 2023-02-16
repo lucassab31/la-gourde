@@ -10,16 +10,18 @@ const Commande = observer(() => {
 
   const changeCardNumber = (e) => {
     if (
-      e.target.value.length === 4 ||
+      (e.target.value.length === 4 ||
       e.target.value.length === 9 ||
-      e.target.value.length === 14
+      e.target.value.length === 14) &&
+      e.keyCode !== 8
     ) {
       e.target.value += " ";
     }
   };
 
   const changeCardDate = (e) => {
-    if (e.target.value.length === 2) {
+    console.log(e);
+    if (e.target.value.length === 2 && e.keyCode !== 8) {
       e.target.value += "/";
     }
   };
@@ -58,6 +60,7 @@ const Commande = observer(() => {
                 id="cardNumber"
                 placeholder="0000 0000 0000 0000"
                 required
+                pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}"
               />
             </div>
             <div className="row">

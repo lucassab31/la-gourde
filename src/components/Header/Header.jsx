@@ -37,7 +37,7 @@ const Header = observer(() => {
             </li>
             <li className="ms-3">
               <button
-                className="navbar-toggler pe-0"
+                className="navbar-toggler pe-0 tw-border-0 tw-outline-none focus:tw-outline-none focus:tw-shadow-none"
                 type="button"
                 data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasDarkNavbar"
@@ -55,7 +55,7 @@ const Header = observer(() => {
             <div className="offcanvas-body d-flex flex-column align-items-end">
               <button
                 type="button"
-                className="btn-close btn-close-white"
+                className="btn-close btn-close-white tw-border-0 tw-outline-none focus:tw-outline-none focus:tw-shadow-none"
                 data-bs-dismiss="offcanvas"
                 aria-label="Close"
               ></button>
