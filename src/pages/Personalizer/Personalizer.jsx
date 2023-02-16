@@ -197,12 +197,6 @@ const Personalizer = observer(() => {
               addToCart(custom);
               resetIngredientsCustom();
               resetSizeChosen();
-              window.location.assign(
-                `${window.location.href.replace(
-                  window.location.pathname,
-                  "/panier"
-                )}`
-              );
             }}
           >
             Ajouter au panier
