@@ -2,7 +2,7 @@ import Nav from "../Nav/Nav";
 
 const Footer = () => {
   return (
-    <footer className="py-3 my-4 border-top border-primary">
+    <footer className="pt-3 pb-1 mt-4 border-top border-primary">
       <ul className="nav d-flex justify-content-center border-bottom pb-3 mb-3 tw-gap-6">
         <Nav strClass="nav-item tw-flex tw-gap-1 tw-items-center" />
       </ul>
