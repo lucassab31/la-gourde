@@ -1,9 +1,10 @@
 const SmoothieIcon = (props) => {
-  const { color } = props;
+  const { color, className } = props;
 
   let colorDark = newShade(color, -10);
   return (
     <svg
+      className={className}
       version="1.1"
       id="Food_Icons"
       width="100%"

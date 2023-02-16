@@ -1,14 +1,5 @@
 export const SMOOTHIES = [
   {
-    id: 1,
-    title: "Créez votre smoothie !",
-    description:
-      "Allant de 2 à 5 saveurs créez votre smoothie ultra fruité et à votre goût.",
-    ingredients: [],
-    size: [],
-    color: "#ff8b8b",
-  },
-  {
     id: 2,
     title: "Coup de gourde",
     description: "Un smoothie qui va vous taper à la tête !",
@@ -79,14 +70,13 @@ export const SMOOTHIES = [
         included: true,
       },
     ],
-    size: [
-      {
-        id: 1,
-        name: "Signature",
-        price: 7.0,
-        maxIngredients: 10,
-      },
-    ],
+    size: {
+      id: 1,
+      name: "Signature",
+      price: 7.0,
+      maxIngredients: 10,
+      show: false,
+    },
     color: "#cc0000",
   },
   {
@@ -134,12 +124,13 @@ export const SMOOTHIES = [
         included: true,
       },
     ],
-    size: [{
+    size: {
       id: 2,
       name: "Gourmands",
       price: 6.5,
       maxIngredients: 10,
-    }],
+      show: false,
+    },
     color: "#b97608",
   },
   {
@@ -201,12 +192,13 @@ export const SMOOTHIES = [
         included: true,
       },
     ],
-    size: [{
+    size: {
       id: 3,
       name: "Healthy's",
       price: 7.5,
       maxIngredients: 10,
-    }],
+      show: false,
+    },
     color: "#a4ff9d",
   },
   {
@@ -267,12 +259,13 @@ export const SMOOTHIES = [
         included: true,
       },
     ],
-    size: [{
+    size: {
       id: 3,
       name: "Healthy's",
       price: 7.5,
       maxIngredients: 10,
-    }],
+      show: false,
+    },
     color: "#60D0F3",
   },
 ];

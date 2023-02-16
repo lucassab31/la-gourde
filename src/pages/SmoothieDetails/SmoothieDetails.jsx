@@ -36,7 +36,7 @@ const SmoothieDetails = () => {
           <h3>Smoothie</h3>
           <h1 className="fw-bold fs-1">{title}</h1>
           <p>{description}</p>
-          <h2>{size[0] ? size[0].price + "€" : "À partir de 7€"}</h2>
+          <h2>{size ? size.price + "€" : "À partir de 7€"}</h2>
           <h4>Ingrédients</h4>
           <ul className="ps-0">
             {ingredients.map((ingredient) => (

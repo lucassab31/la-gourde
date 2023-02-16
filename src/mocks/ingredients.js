@@ -7,7 +7,7 @@ export const INGREDIENTS = [
       {
         id: 1,
         name: "Agrumes",
-        icon : "agrums.svg"
+        icon: "agrums.svg",
       },
     ],
     included: false,
@@ -20,7 +20,7 @@ export const INGREDIENTS = [
       {
         id: 2,
         name: "Fruits rouges",
-        icon : "red_fruit.svg"
+        icon: "red_fruit.svg",
       },
     ],
     included: false,
@@ -33,7 +33,7 @@ export const INGREDIENTS = [
       {
         id: 3,
         name: "Armoise",
-        icon : "armoise.svg"
+        icon: "armoise.svg",
       },
     ],
     included: false,
@@ -46,7 +46,7 @@ export const INGREDIENTS = [
       {
         id: 4,
         name: "Pollen",
-        icon : "pollen.svg"
+        icon: "pollen.svg",
       },
     ],
     included: false,
@@ -59,7 +59,7 @@ export const INGREDIENTS = [
       {
         id: 3,
         name: "Armoise",
-        icon : "armoise.svg"
+        icon: "armoise.svg",
       },
     ],
     included: false,
@@ -72,7 +72,7 @@ export const INGREDIENTS = [
       {
         id: 5,
         name: "Latex",
-        icon : "latex.svg"
+        icon: "latex.svg",
       },
     ],
     included: false,
@@ -85,7 +85,7 @@ export const INGREDIENTS = [
       {
         id: 6,
         name: "Arachides",
-        icon : "nuts.svg"
+        icon: "nuts.svg",
       },
     ],
     included: false,
@@ -98,7 +98,7 @@ export const INGREDIENTS = [
       {
         id: 7,
         name: "Fruit à coque",
-        icon : "amaranth.svg"
+        icon: "amaranth.svg",
       },
     ],
     included: false,
@@ -111,7 +111,7 @@ export const INGREDIENTS = [
       {
         id: 8,
         name: "Choux",
-        icon : "cabbage.svg"
+        icon: "cabbage.svg",
       },
     ],
     included: false,
@@ -124,7 +124,7 @@ export const INGREDIENTS = [
       {
         id: 9,
         name: "Pépins",
-        icon : "pip.svg"
+        icon: "pip.svg",
       },
     ],
     included: false,
@@ -137,7 +137,7 @@ export const INGREDIENTS = [
       {
         id: 10,
         name: "Gluten",
-        icon : "gluten.svg"
+        icon: "gluten.svg",
       },
     ],
     included: false,
@@ -150,7 +150,7 @@ export const INGREDIENTS = [
       {
         id: 11,
         name: "Caféine",
-        icon : "coffee.svg"
+        icon: "coffee.svg",
       },
     ],
     included: false,
@@ -163,7 +163,7 @@ export const INGREDIENTS = [
       {
         id: 12,
         name: "LTP",
-        icon : "ltp.svg"
+        icon: "ltp.svg",
       },
     ],
     included: false,

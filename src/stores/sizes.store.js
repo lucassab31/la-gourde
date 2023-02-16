@@ -6,6 +6,7 @@ export const Sizes = types.model("Sizes", {
   name: types.string,
   price: types.number,
   maxIngredients: types.number,
+  show: types.boolean,
 });
 
 export const SizesStore = types
@@ -23,6 +24,31 @@ export const SizesStore = types
     }),
   }));
 
+export const SizeChosenStore = types
+  .model("SizeChosenStore", {
+    sizeChosen: types.maybeNull(Sizes),
+  })
+  .actions((self) => ({
+    setSizeChosen(size) {
+      const validations = Sizes.validate(size, [
+        { id: types.number },
+        { name: types.string },
+        { price: types.number },
+        { maxIngredients: types.number },
+        { show: types.boolean },
+      ]);
+      if (validations.length > 0) return;
+      self.sizeChosen = size;
+    },
+    resetSizeChosen() {
+      self.sizeChosen = null;
+    },
+  }));
+
 export const sizesStore = SizesStore.create({
   sizes: [],
+});
+
+export const sizeChosenStore = SizeChosenStore.create({
+  sizes: null,
 });

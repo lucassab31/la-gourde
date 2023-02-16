@@ -9,6 +9,7 @@ import Cart from "../pages/Cart/Cart";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Commande from "pages/Commande/Commande";
 import Recap from "pages/Recap/Recap";
+import Personalizer from "pages/Personalizer/Personalizer";
 
 const AppRouter = () => {
   const router = createBrowserRouter([
@@ -34,16 +35,20 @@ const AppRouter = () => {
               loader: smoothieLoader,
             },
             {
-                path: "/panier",
-                element: <Cart />,
+              path: "/panier",
+              element: <Cart />,
             },
             {
-                path: "/commande",
-                element: <Commande />,
+              path: "/personnaliser",
+              element: <Personalizer />,
             },
             {
-                path: "/recap",
-                element: <Recap />,
+              path: "/commande",
+              element: <Commande />,
+            },
+            {
+              path: "/recap",
+              element: <Recap />,
             },
           ],
         },
