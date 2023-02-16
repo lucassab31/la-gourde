@@ -1,7 +1,16 @@
 import { Link } from "react-router-dom";
+import { useStore } from "contexts/store.context";
 import thanks from "../../images/thanks.svg";
+import { useEffect } from "react";
 
 const Recap = () => {
+  const { cart } = useStore();
+  const { resetCart } = cart;
+
+  useEffect(() => {
+    resetCart();
+  }, []);
+
   return (
     <div className="card mx-auto w-50 border-secondary">
       <div className="card-header">

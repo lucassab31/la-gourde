@@ -60,6 +60,7 @@ const Commande = observer(() => {
                 id="cardNumber"
                 placeholder="0000 0000 0000 0000"
                 required
+                pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}"
               />
             </div>
             <div className="row">
