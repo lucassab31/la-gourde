@@ -11,17 +11,19 @@ const SmoothieCard = ({ smoothie }) => {
   const color = smoothie.color;
   const newColor = newShadeOpacity(color, 0.3);
   return (
-    <div className="col-4">
+    <div className="tw-w-full">
       <div
         className="card card-cover h-100 overflow-hidden bg-white rounded-4"
         style={{ backgroundColor: smoothie.color, borderColor: smoothie.color }}
       >
         <div
-          className="d-flex flex-column h-100 m-3 p-5 rounded-4 "
+          className="d-flex flex-column h-100 m-2 p-5 rounded-3 "
           style={{ backgroundColor: newColor }}
         >
-          <div className={style.smoothieIcon}>
-            <SmoothieIcon color={smoothie.color} />
+          <div
+            className={`${style.smoothieIcon} tw-flex tw-justify-center tw-w-full`}
+          >
+            <SmoothieIcon className="tw-w-3/5" color={smoothie.color} />
           </div>
           <h3 className="pt-5  mb-4 display-6 lh-1 fw-bold">
             {smoothie.title}
