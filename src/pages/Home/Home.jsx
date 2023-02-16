@@ -12,7 +12,6 @@ const Home = observer(() => {
   } = useStore();
 
   let productsListBestSeller = toJS(products).slice(1, 4);
-  let productFirst = toJS(products)[1];
 
   useEffect(() => {
     loadSmoothies();

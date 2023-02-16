@@ -55,14 +55,7 @@ const Smoothies = observer(() => {
   return (
     <section>
       <div className="container px-0" id="custom-cards">
-        <h2 className="pb-2 border-bottom">Liste des Smoothies</h2>
-        <h3>Smoothies à faire</h3>
-        <div className="position-relative overflow-hidden p-3 p-md-5 my-4 bg-secondary rounded-4">
-          {productOne ? (
-            <SmoothieCardCreate key={productOne.id} smoothie={productOne} />
-          ) : null}
-        </div>
-        <h3>Nos smoothies</h3>
+        <h1 className="pb-2 border-bottom">Nos smoothies</h1>
         <div className="row">
           {/* Filter */}
           <div className="col-12 col-md-6 col-lg-5">
@@ -106,6 +99,18 @@ const Smoothies = observer(() => {
                     </div> */}
         </div>
         <div className="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+          <SmoothieCard
+            key={0}
+            smoothie={{
+              id: 0,
+              title: "Smoothie personnalisé",
+              description: "Votre création",
+              ingredients: [],
+              size: null,
+              color: "#ff8b8b",
+              quantity: 1,
+            }}
+          />
           {productsList.map((product) =>
             product.id > 1 ? (
               <SmoothieCard key={product.id} smoothie={product} />

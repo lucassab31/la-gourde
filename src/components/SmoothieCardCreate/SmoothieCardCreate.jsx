@@ -20,10 +20,7 @@ const SmoothieCard = ({ smoothie }) => {
         {bIngredients ? (
           <AllergeneCard ingredients={smoothie.ingredients} />
         ) : null}
-        <Link
-          to={`/smoothie/${smoothie.id}`}
-          className="btn btn-primary text-white"
-        >
+        <Link to={`/personnaliser`} className="btn btn-primary text-white">
           Commander
         </Link>
       </div>

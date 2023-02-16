@@ -29,17 +29,23 @@ const SmoothieCard = ({ smoothie }) => {
           </h3>
           <p className="mb-4">{smoothie.description}</p>
           <h4>
-            {smoothie.size ? smoothie.size[0].price + "€" : "À partir de 7€"}
+            {smoothie.size ? smoothie.size.price + "€" : "À partir de 4€"}
           </h4>
           {bIngredients ? (
             <AllergeneCard ingredients={smoothie.ingredients} />
           ) : null}
-          <Link
-            to={`/smoothie/${smoothie.id}`}
-            className="btn btn-primary text-white"
-          >
-            Commander
-          </Link>
+          {smoothie.id === 0 ? (
+            <Link to={`/personnaliser`} className="btn btn-primary text-white">
+              Commander
+            </Link>
+          ) : (
+            <Link
+              to={`/smoothie/${smoothie.id}`}
+              className="btn btn-primary text-white"
+            >
+              Commander
+            </Link>
+          )}
         </div>
       </div>
     </div>
