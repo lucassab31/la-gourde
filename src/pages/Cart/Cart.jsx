@@ -5,10 +5,11 @@ import BackButton from "components/BackButton/BackButton";
 import Button from "components/Button/Button";
 import SmoothieIcon from "components/SmoothieIcon/SmoothieIcon";
 import { Link } from "react-router-dom";
+import * as Icon from "react-bootstrap-icons";
 
 const Cart = observer(() => {
   const { cart } = useStore();
-  const { products, totalPrice, resetCart } = cart;
+  const { products, totalPrice, resetCart, removeFromCart } = cart;
 
   return (
     <>
@@ -38,6 +39,16 @@ const Cart = observer(() => {
                           onClickPlus={product.increment}
                           onClickMinus={product.decrement}
                         />
+                      </div>
+                      <div className="tw-flex tw-justify-end">
+                        <button
+                          className="btn btn-warning !tw-bg-red-600 text-white fw-bold tw-mt-2"
+                          onClick={() => {
+                            removeFromCart(product.id);
+                          }}
+                        >
+                          <Icon.TrashFill />
+                        </button>
                       </div>
                     </div>
                   </div>

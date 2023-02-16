@@ -47,7 +47,6 @@ export const CartStore = types
   })
   .actions((self) => ({
     addToCart(product) {
-      console.log(product);
       const foundProduct = self.products.find((p) => p.id === product.id);
       if (foundProduct) {
         foundProduct.quantity += product.quantity;
