@@ -33,7 +33,7 @@ const Commande = observer(() => {
         </div>
         <div className="col-md-7">
           <h1>Paiement</h1>
-          <form action="/recap" method="post">
+          <form action="/recap" method="get">
             <div className="mb-3">
               <label htmlFor="name" className="form-label">
                 Nom
