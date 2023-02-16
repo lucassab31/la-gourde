@@ -59,8 +59,8 @@ const Header = observer(() => {
                 data-bs-dismiss="offcanvas"
                 aria-label="Close"
               ></button>
-              <ul className="navbar-nav align-items-end flex-grow-1 w-100 p-4">
-                <Nav strClass="nav-item" />
+              <ul className="navbar-nav align-items-end flex-grow-1 w-100 py-4">
+                <Nav strClass="py-3 mb-1 fs-2 fw-bold d-flex align-items-center justify-content-between w-100" style={{border:'none'}} icon="" />
               </ul>
             </div>
           </div>
