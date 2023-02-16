@@ -29,7 +29,9 @@ export const ProductsStore = types
       try {
         const products = yield getSmoothies();
         self.products = products.filter((product) => {
-          return product.ingredients.some((item) => (item.id = ingredient));
+          return product.ingredients.some(
+            (item) => item.id === Number(ingredient)
+          );
         });
       } catch (error) {
         console.log(error);

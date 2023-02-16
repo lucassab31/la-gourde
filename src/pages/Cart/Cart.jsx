@@ -16,7 +16,7 @@ const Cart = observer(() => {
         <div className="col-12 py-3">
           <BackButton />
         </div>
-        <div className="col-6 mx-auto px-5">
+        <div className="col-lg-9 mx-auto px-5">
           <div className="card p-3">
             <h1>Votre Panier </h1>
             <ul className="ps-0 pt-5">
