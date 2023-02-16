@@ -6,7 +6,7 @@ const QuantityPicker = (props) => {
 
     return (
         <div className={style.quantityPicker}>
-            <button onClick={onClickMinus} className="btn btn-secondary" >-</button>
+            <button onClick={onClickMinus} disabled={quantity <= 1} className="btn btn-secondary" >-</button>
             <span>{quantity}</span>
             <button onClick={onClickPlus} className="btn btn-secondary" >+</button>
         </div>
