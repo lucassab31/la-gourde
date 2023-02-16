@@ -38,7 +38,10 @@ main {
 
 .hero_banner .product-device,
 .product-device {
-  transform: rotate(18deg) translateY(10%) translateX(-10%);
+  transform: rotate(18deg);
+  top: 47px;
+  position: absolute;
+  right: 83px;
 }
 
 #cart {

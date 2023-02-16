@@ -20,8 +20,8 @@ const Home = observer(() => {
   return (
     <>
       <section className="hero_banner">
-        <div className="position-relative overflow-hidden p-3 p-md-5 bg-secondary rounded-4">
-          <div className="col-md-6 p-lg-5 mx-5 my-5 text-white">
+        <div className="position-relative overflow-hidden p-3 p-lg-5 bg-secondary rounded-4">
+          <div className="col-md-6 col-lg-4 mx-5 my-5 text-white">
             <h1 className="display-4 fw-bold">Créez votre smoothie !</h1>
             <p className="lead fw-normal">
               Vous pouvez choisir entre 2 et 5 goûts.
@@ -34,7 +34,7 @@ const Home = observer(() => {
             </Link>
           </div>
           <div className="product-device d-none d-md-block col-4">
-            <SmoothieIcon className={"tw-h-[400px]"} color={"#ff8b8b"} />
+            <SmoothieIcon color={"#ff8b8b"} />
           </div>
         </div>
       </section>
