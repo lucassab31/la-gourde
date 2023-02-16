@@ -10,7 +10,6 @@ const Smoothies = observer(() => {
       products,
       loadSmoothies,
       loadSmoothiesByIngredient,
-      loadSmoothieOne,
     },
   } = useStore();
   const {
@@ -22,10 +21,9 @@ const Smoothies = observer(() => {
 
   useEffect(() => {
     loadSmoothies();
-    loadSmoothieOne(1);
     loadIngredients();
     loadAllergens();
-  }, [loadSmoothies, loadSmoothieOne, loadIngredients, loadAllergens]);
+  }, [loadSmoothies, loadIngredients, loadAllergens]);
 
   let productsList = toJS(products);
   let ingredientsList = toJS(ingredients);
