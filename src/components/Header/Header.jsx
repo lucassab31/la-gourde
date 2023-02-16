@@ -1,7 +1,7 @@
 import Nav from "../Nav/Nav";
 import logo from "../../images/logo.svg";
 import style from "./Header.module.scss";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import * as Icon from 'react-bootstrap-icons';
 
 import { useStore } from "contexts/store.context";
@@ -21,9 +21,9 @@ const Header = observer(() => {
         <header>
             <nav className="navbar fixed-top bg-white">
                 <div className="container">
-                    <a className="navbar-brand" href="#">
+                    <Link to="/" className="navbar-brand">
                         <img src={logo} alt="Logo La Gourde" />
-                    </a>
+                    </Link>
                     <ul className="navbar-nav flex-row align-items-center">
                         <li>
                             <NavLink to="/panier" className="position-relative">

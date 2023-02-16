@@ -8,6 +8,7 @@ import SmoothieDetails, {
 import Cart from "../pages/Cart/Cart";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Commande from "pages/Commande/Commande";
+import Recap from "pages/Recap/Recap";
 
 const AppRouter = () => {
   const router = createBrowserRouter([
@@ -39,6 +40,10 @@ const AppRouter = () => {
             {
                 path: "/commande",
                 element: <Commande />,
+            },
+            {
+                path: "/recap",
+                element: <Recap />,
             },
           ],
         },
